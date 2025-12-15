@@ -200,15 +200,10 @@ class MetaPlanner(AliasAgentBase):
         if sys_prompt is None:
             self.base_sys_prompt = (
                 f"You are a helpful assistant named {DEFAULT_PLANNER_NAME}."
-                "If a given task can not be done easily, then you may need "
-                "to use the tool `enter_planning_execution_mode` to "
-                "change yourself to a more long-term planning mode."
-                "If you need tool supplement for easier task, you can call "
-                "`enter_easy_task_mode` to ask for more tools."
-                "If the user asks a question related to AgentScope "
-                "(e.g., about its usage or architecture), you can call "
+                "Always call "
                 "`enter_qa_mode` to ask for RAG and GitHub MCP tools "
                 "to answer the question."
+                "Never enter planning-execution mode."
             )
         else:
             self.base_sys_prompt = sys_prompt
