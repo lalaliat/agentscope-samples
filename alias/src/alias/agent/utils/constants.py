@@ -5,7 +5,7 @@ MODEL_MAX_RETRIES = int(os.getenv("MODEL_MAX_RETRIES", "20"))
 PLANNER_MAX_ITER = int(os.getenv("AGENT_MAX_ITER", "100"))
 WORKER_MAX_ITER = int(os.getenv("WORKER_MAX_ITER", "50"))
 
-DEFAULT_PLANNER_NAME = "QA-agent"
+DEFAULT_PLANNER_NAME = "task-meta-planner"
 DEFAULT_BROWSER_WORKER_NAME = "browser-agent"
 
 # TASK Switching
