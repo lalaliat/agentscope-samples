@@ -49,11 +49,11 @@ async def add_tools(
                 f"?tavilyApiKey={os.getenv('TAVILY_API_KEY')}",
             ],
         )
-        await toolkit.add_and_connect_mcp_client(
-            tavily_mcp_client,
-            enable_funcs=["tavily_search", "tavily_extract"],
-            postprocess_func=long_text_hook.truncate_and_save_response,
-        )
+        # await toolkit.add_and_connect_mcp_client(
+        #     tavily_mcp_client,
+        #     enable_funcs=["tavily_search", "tavily_extract"],
+        #     postprocess_func=long_text_hook.truncate_and_save_response,
+        # )
     except Exception as e:
         print(traceback.format_exc())
         raise e from None
